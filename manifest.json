@@ -1,0 +1,21 @@
+{
+  "name": "Content Warnings",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Content Warnings on Facebook posts do not work if the content is still visible. Now, you have the option of seeing or avoiding any post with content warnings on your feed."
+  "homepage_url": "https://disregardingstandards.github.io/content-warnings",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Toggle on/off."
+  },
+  "content_scripts": [{
+    "matches": ["https://www.facebook.com/*"],
+    "css": ["css/style.css"],
+    "js": [ "js/jquery.min.js","js/main.js" ]
+  } ]
+}
